@@ -15,8 +15,8 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link id="theme-css" href={`${contextPath}/themes/lara-light-indigo/theme.css`} rel="stylesheet"></link>
-          {/*<link id="theme-css" href={`${contextPath}/themes/lara-light-purple/theme.css`} rel="stylesheet"></link> */}
+          {/* white  <link id="theme-css" href={`${contextPath}/themes/tailwind-light/theme.css`} rel="stylesheet"></link> */}
+          <link id="theme-css" href={`${contextPath}/themes/vela-blue/theme.css`} rel="stylesheet"></link>
         </Head>
         <body>
           <Main />
