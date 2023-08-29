@@ -1,7 +1,6 @@
+import { Button, CheckButton } from "@/common/component";
 
 const IndexPage = () => {
-  return (
-    <div>뭐를 넣지?</div>
-  )
-}
-export default IndexPage
+  return <div></div>;
+};
+export default IndexPage;
