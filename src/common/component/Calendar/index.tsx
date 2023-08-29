@@ -1,5 +1,5 @@
 import { Calendar as PCalendar, CalendarProps } from "primereact/calendar";
-import { addLocale, locale } from "primereact/api";
+import { addLocale } from "primereact/api";
 
 const Calendar = (props: CalendarProps) => {
   addLocale("ko", {
