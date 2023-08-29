@@ -10,8 +10,6 @@ import { AppMenuItem } from "../../types/types";
 const AppMenu = () => {
   const { layoutConfig } = useContext(LayoutContext);
 
-  console.log(layoutConfig.locale.code);
-
   // ko or en
   const locale = layoutConfig.locale.code;
   // : AppMenuItem[]
