@@ -134,11 +134,11 @@ const AppConfig = (props: AppConfigProps) => {
               onChange={(e) => {
                 const newDarkModeValue = e.value as boolean;
                 let newColorScheme = "light";
-                let newTheme = "lara-light-indigo";
+                let newTheme = "light-blue";
 
                 if (newDarkModeValue) {
                   newColorScheme = "dark";
-                  newTheme = "lara-dark-indigo";
+                  newTheme = "dark-blue";
                 }
 
                 changeTheme(newTheme, newColorScheme, newDarkModeValue);

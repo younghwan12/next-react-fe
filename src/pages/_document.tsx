@@ -13,12 +13,11 @@ class MyDocument extends Document {
     console.log("contextPath", getConfig().publicRuntimeConfig);
 
     return (
-      <Html lang="en">
+      <Html lang="ko">
         <Head>
-          {/* white  <link id="theme-css" href={`${contextPath}/themes/tailwind-light/theme.css`} rel="stylesheet"></link> */}
           <link
             id="theme-css"
-            href={`${contextPath}/themes/lara-dark-indigo/theme.css`}
+            href={`${contextPath}/themes/light-blue/theme.css`}
             rel="stylesheet"
           ></link>
         </Head>
