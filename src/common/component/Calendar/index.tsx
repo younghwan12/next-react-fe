@@ -34,6 +34,6 @@ const Calendar = (props: CalendarProps) => {
       "12월",
     ],
   });
-  return <PCalendar {...props} />;
+  return <PCalendar {...props} dateFormat="yy-mm-dd" />;
 };
 export default Calendar;
