@@ -35,7 +35,7 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
           height={"35px"}
           alt="logo"
         />
-        <span>HOME</span>
+        <span>LOGO</span>
       </Link>
 
       <button

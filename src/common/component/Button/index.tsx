@@ -1,4 +1,5 @@
 import { Button as PButton, ButtonProps } from "primereact/button";
+import { Ripple } from "primereact/ripple";
 
 const Button = (props: ButtonProps) => {
   return <PButton {...props} />;

@@ -110,10 +110,6 @@ const Layout = ({ children }: ChildContainerProps) => {
     }
   };
 
-  useMountEffect(() => {
-    PrimeReact.ripple = true;
-  });
-
   useEffect(() => {
     if (layoutState.overlayMenuActive || layoutState.staticMenuMobileActive) {
       bindMenuOutsideClickListener();

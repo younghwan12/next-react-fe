@@ -1,4 +1,4 @@
-import PrimeReact from "primereact/api";
+import PrimeReact, { locale } from "primereact/api";
 import { Button } from "primereact/button";
 import { InputSwitch, InputSwitchChangeEvent } from "primereact/inputswitch";
 import { RadioButton, RadioButtonChangeEvent } from "primereact/radiobutton";
@@ -65,15 +65,9 @@ const AppConfig = (props: AppConfigProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [layoutConfig.scale]);
 
-  // const changeMode = (theme: string, colorScheme: string) => {
-  //   PrimeReact.changeTheme?.(layoutConfig.theme, theme, "theme-css", () => {
-  //     setLayoutConfig((prevState: LayoutConfig) => ({
-  //       ...prevState,
-  //       theme,
-  //       colorScheme,
-  //     }));
-  //   });
-  // };
+  useEffect(() => {
+    locale(layoutConfig.locale);
+  }, [layoutConfig.locale]);
 
   return (
     <>
