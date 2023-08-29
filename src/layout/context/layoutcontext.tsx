@@ -10,7 +10,7 @@ export const LayoutContext = createContext({} as LayoutContextProps);
 export const LayoutProvider = ({ children }: ChildContainerProps) => {
   const [layoutConfig, setLayoutConfig] = useState<LayoutConfig>({
     ripple: true,
-    locale: "ko",
+    locale: { name: "한국어", code: "ko" },
     darkMode: false,
     menuMode: "static",
     colorScheme: "light",

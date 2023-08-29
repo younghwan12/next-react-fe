@@ -7,6 +7,7 @@ import { classNames } from "primereact/utils";
 import React, { useContext, useEffect, useState } from "react";
 import { AppConfigProps, LayoutConfig, LayoutState } from "../../types/types";
 import { LayoutContext } from "./context/layoutcontext";
+import { Dropdown } from "primereact/dropdown";
 
 const AppConfig = (props: AppConfigProps) => {
   const [scales] = useState([12, 13, 14, 15, 16]);
@@ -66,8 +67,20 @@ const AppConfig = (props: AppConfigProps) => {
   }, [layoutConfig.scale]);
 
   useEffect(() => {
-    locale(layoutConfig.locale);
+    locale(layoutConfig.locale.code);
   }, [layoutConfig.locale]);
+
+  const language = [
+    { name: "한국어", code: "ko" },
+    { name: "English", code: "en" },
+  ];
+
+  const changeLanguage = (data) => {
+    setLayoutConfig((prevState: LayoutConfig) => ({
+      ...prevState,
+      locale: data,
+    }));
+  };
 
   return (
     <>
@@ -129,7 +142,6 @@ const AppConfig = (props: AppConfigProps) => {
                 const newDarkModeValue = e.value as boolean;
                 let newColorScheme = "light";
                 let newTheme = "light-blue";
-
                 if (newDarkModeValue) {
                   newColorScheme = "dark";
                   newTheme = "dark-blue";
@@ -138,6 +150,16 @@ const AppConfig = (props: AppConfigProps) => {
                 changeTheme(newTheme, newColorScheme, newDarkModeValue);
               }}
             ></InputSwitch>
+
+            <h5>Language</h5>
+            <Dropdown
+              placeholder={"Select a Language"}
+              value={layoutConfig.locale}
+              options={language}
+              optionLabel="name"
+              onChange={(e) => changeLanguage(e.value)}
+              className="w-full"
+            />
           </>
         )}
       </Sidebar>
