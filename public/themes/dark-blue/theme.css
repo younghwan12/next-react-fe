@@ -3461,11 +3461,14 @@
   text-align: left;
   padding: 0.75rem 0.75rem;
   border: 1px solid #404040;
-  border-width: 0 0 1px 0;
+  border-width: 0 1px 1px 0;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.87);
-  background: #1e1e1e;
+  background: #858cb5;
   transition: none;
+}
+.p-datatable .p-datatable-thead > tr > th:last-child {
+  border-width: 0 0 1px 0;
 }
 .p-datatable .p-datatable-tfoot > tr > td {
   text-align: left;
@@ -3527,8 +3530,11 @@
 .p-datatable .p-datatable-tbody > tr > td {
   text-align: left;
   border: 1px solid #404040;
-  border-width: 0 0 1px 0;
+  border-width: 0 1px 1px 0;
   padding: 0.75rem 0.75rem;
+}
+.p-datatable .p-datatable-tbody > tr > td:last-child {
+  border-width: 0 0 1px 0;
 }
 .p-datatable .p-datatable-tbody > tr > td .p-row-toggler,
 .p-datatable .p-datatable-tbody > tr > td .p-row-editor-init,
